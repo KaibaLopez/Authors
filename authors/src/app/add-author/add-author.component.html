@@ -1,0 +1,21 @@
+<div class="container">
+  <button type="button" class="btn btn-link" [routerLink]="['/']">Home</button>
+  <form (submit)="addAuthor()">
+    <div class="form-group">
+      <label for="usr">Author's Name:</label>
+      <input type="text"
+             class="form-control"
+             id="usr"
+             name="newAuthor.name"
+             minlength="3"
+             maxlength="30"
+             [(ngModel)]="newAuthor.name"
+             #name='ngModel' />
+      <div class="alert alert-warning" *ngIf="FlashMessage">
+        <strong>Oops!</strong> {{FlashMessage}}.
+      </div>
+    </div>
+    <br />
+    <input type="submit" class="btn btn-primary" value="Create Author" />
+  </form>
+</div>

@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\authors",
+    "\\authors\\src",
+    "\\authors\\src\\app",
+    "\\authors\\src\\app\\add-author",
+    "\\authors\\src\\app\\add-quote",
+    "\\authors\\src\\app\\author",
+    "\\authors\\src\\app\\edit-author",
+    "\\authors\\src\\app\\quote",
+    "\\authors\\src\\app\\show-authors"
+  ],
+  "SelectedNode": "\\authors\\src\\app\\add-author\\add-author.component.html",
+  "PreviewInSolutionExplorer": false
+}

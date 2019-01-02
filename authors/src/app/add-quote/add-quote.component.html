@@ -1,0 +1,22 @@
+<div class="container">
+  <h4>{{Author.name}}</h4>
+  <form (submit)="addQuote()">
+    <div class="form-group">
+      <label for="usr">Quote:</label>
+      <input type="text"
+             class="form-control"
+             id="usr"
+             name="newQuote.content"
+             minlength="3"
+             maxlength="50"
+             [(ngModel)]="newQuote.content"
+             #name='ngModel' />
+      <div class="alert alert-warning" *ngIf="FlashMessage">
+        <strong>Oops!</strong> {{FlashMessage}}.
+      </div>
+    </div>
+    <br />
+    <input type="submit" class="btn btn-primary" value="Add Quote" style="margin-right:5%;"/>
+    <button type="button" class="btn btn-primary" [routerLink]="['/quotes',Author._id]">Cancel</button>
+  </form>
+</div>

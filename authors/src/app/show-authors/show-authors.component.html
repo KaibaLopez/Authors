@@ -1,0 +1,20 @@
+<button type="button" class="btn btn-link" [routerLink]="['add']">Create new Author</button>
+<h2>Authors</h2>
+<p>Select an author to see their quotes:</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>author</th>
+      <th>Actions available</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let author of Authors">
+      <td>{{author.name}}</td>
+      <td>
+        <button type="button" class="btn btn-link" [routerLink]="['edit',author._id]">edit</button>
+        <button type="button" class="btn btn-link" [routerLink]="['/quotes',author._id]">view quotes</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
